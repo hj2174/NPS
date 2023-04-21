@@ -9,8 +9,6 @@
 }
 
 
-
-
 body{
 	overflow-x: hidden;  
 }
@@ -38,7 +36,6 @@ body{
 
 	background: url(../img/main_bg2.png)no-repeat;
 }
-
 
 /* 헤더 */
 .header_top{ 
@@ -170,6 +167,7 @@ section h2{
 }
 .main_banner{
 	width:725px;
+	height: 320px;
 	overflow: hidden;
 	margin:0 auto;
 	border-radius: 30px;
@@ -190,14 +188,34 @@ section h2{
 	border-radius: 30px
 }
 
-
 .service > ul{
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.service > ul li p{
-	font-size: 16px;
+.service > ul > li{
+    width:90px;
+    margin:0 3px 20px;
+	border:1px solid #D3D3D3;
+	border-radius: 10px;
+	background-color: #fff;	
+	box-sizing: border-box;
+}
+.service > ul > li a{
+	display: block;
+	position:relative;
+	padding:10px;
+	height:60px;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.service > ul > li img{
+	position: absolute;
+    right: 4px;
+    bottom: 4px;
+	background-color: #F6F6F6;
+    border-radius: 30px;
 }
 
 /* 개인/기업서비스 */
@@ -250,4 +268,84 @@ section h2{
 
 
 /* 푸터 */
+footer{
+	background-color: #fff;
+	padding:30px 0 50px;
+}
+.footer_inner{
+	max-width: 1220px;
+	width:100%;
+	margin:0 auto;
+}
+.footer_inner > div{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer_inner > div > ul{
+	display: flex;
+}
+.footer_con1 > div{
+	display: flex;
+	align-items: center
+}
+.footer_con1 > div > p{
+	font-size: 18px;
+	margin:0 20px;
+}
+.footer_con1 img{
+	width:15px;
+	height:15px;
+	padding:7px;
+	border-radius: 10px;
+}
+.footer_con1_l img{
+	background-color:#13A538;
+}
+.footer_con1_l .arrow,.footer_con1_r .arrow{
+	background-color: #fff;
+}
 
+.footer_con1_r img{
+	background-color:#425ABE;
+}
+
+.footer_con2{
+	border-radius: 10px;
+	padding:10px;
+	margin:20px 0;
+	background-color: rgb(243, 243, 243);
+}
+
+.footer_link{
+	
+}
+.footer_sns{
+	
+}
+.footer_sns li{ 
+	margin:0 5px;
+	border:0.5px solid rgb(202, 202, 202);
+	border-radius:50px; 
+	background-color: rgb(255, 255, 255);
+}
+
+.footer_con3_l {
+    max-width: 830px;
+    width: 100%;
+}
+
+.footer_con3_r{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between
+}
+
+.footer_con3_r .mark{
+	width:100%;
+
+}
+.footer_con3_r .mark ul{
+	display: flex;	
+	flex-direction: row-reverse;
+}

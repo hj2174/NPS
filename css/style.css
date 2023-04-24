@@ -49,26 +49,33 @@ body{
 
 /* 서치 */
 .header_top fieldset{
-	width:220px; 
+	width:200px; 
 	display: flex;
+	border-radius: 50px;
 	margin-left:350px;
-	border: 1px solid rgb(78, 78, 78);
+	border: 1px solid #E8E8E8;
 }
 
 .header_top .search{ 
 	border:none;
+	border-radius: 50px;
 }
 
 .header_top .search_btn{
-	background: url(../img/i_search.svg)no-repeat center;
+	background: url(../img/i_search.svg) no-repeat center;
 	border:none;
 	width:35px;
 	height:35px;
 }
 
+.header_top > p > a{
+	color:#6A6A6A;
+}
+
 /* 언어변경 */
 .language{
 	border:none;
+	color:#6A6A6A;
 }
 
 /* 폰트사이즈 변경 */
@@ -78,7 +85,7 @@ body{
 .font_size ul li{
 	font-size: 30px;
 	padding:10px;
-	border: 1px solid #ccc;
+	border: 1px solid #E8E8E8;
 }
 
 .font_size .big::after{
@@ -96,8 +103,8 @@ body{
 /* 네비 */
 
 nav{
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
+	border-top:1px solid #E8E8E8;
+	border-bottom:1px solid #E8E8E8;
 	position: relative;
 	z-index: 99;
 }
@@ -203,6 +210,19 @@ section h2{
 	background-color: #fff;	
 	box-sizing: border-box;
 }
+.service > ul > li:hover{
+	border:1px solid #2bada0;
+}
+
+.service > ul > li:hover a{
+	color:#2bada0;
+	font-weight: bold;
+}
+
+.service > ul > li:hover img{
+	background-color: #2bada0;
+}
+
 .service > ul > li a{
 	display: block;
 	position:relative;
@@ -212,6 +232,7 @@ section h2{
 	line-height: 17px;
 }
 
+
 .service > ul > li img{
 	position: absolute;
     right: 4px;
@@ -220,18 +241,21 @@ section h2{
     border-radius: 30px;
 }
 
+
 /* 개인/기업서비스 */
 .service_zone{
 	width:100%;
 	display: flex;
   	align-items: center;
+	justify-content: space-between;
 }
-
+.customer_service,.business_service{
+	height:150px;
+	padding:35px;
+}
 .customer_service{
-	width:910px;
 	background-color: #D3EFEE;
 	border-radius: 30px;
-	padding:35px;
 }
 .customer_service h2{
 	color: #13927E;
@@ -241,11 +265,19 @@ section h2{
 }
 
 .customer_service li{
-	width:110px;
-	background-color: #fff;
-	padding:10px;
-	margin:10px;
+	display: inline-flex;
+	width: 105px;
+	height:88px;
+    background-color: #fff;
+    line-height: 22px;
+    padding:0 15px;
+	margin:7px;
 	border-radius: 15px;
+	
+}
+.customer_service li:hover{
+	background-color:#13927E;
+	
 }
 
 .customer_service li a{
@@ -255,18 +287,49 @@ section h2{
 	width: 100%;
 	height: 100%;
 	border-radius: 20px;
-	background-color: #fff;
 	text-align: center;
-	font-weight: 500;
+	color:#13927E;
+	transition: all 0.4s;
 }
 
+.customer_service li:hover a{
+	color:#FFF;
+}
+
+
+/* 기업서비스 */
 .business_service{
-	padding:20px;
+	width:160px;
 	border-radius: 30px;
 	background-color: #FCE3CE;
-	margin-left: 20px;
 	color: #d4520c;
+	display: flex;
+	align-items: center;
+	text-align: center;
 }
+.business_service h2{
+	margin:0 auto;
+	color:#d4520c;
+}
+
+.business_service_go{
+	
+	position: relative;
+	
+}
+
+.business_service_go img{
+	position: absolute;
+    top: -45px;
+    left: -85px;
+    width: 20px;
+    height: 20px;
+    background-color: #FCE3CE;
+    border-radius: 50px;
+    padding: 35px;
+}
+
+
 
 /* 팝업존 */
 .popup_zone{
@@ -398,14 +461,10 @@ section h2{
 	border-radius: 30px;
 }
 
-
-
 .sns_tab_con img{
 	width:530px;
 	height: 190px;
 }
-
-
 
 
 
@@ -431,10 +490,12 @@ footer{
 	display: flex;
 	align-items: center
 }
+
 .footer_con1 > div > p{
 	font-size: 18px;
 	margin:0 20px;
 }
+
 .footer_con1 img{
 	width:15px;
 	height:15px;
@@ -444,6 +505,7 @@ footer{
 .footer_con1_l img{
 	background-color:#13A538;
 }
+
 .footer_con1_l .arrow,.footer_con1_r .arrow{
 	background-color: #fff;
 }
@@ -472,21 +534,60 @@ footer{
 	background-color: rgb(255, 255, 255);
 }
 
-.footer_con3_l {
-    max-width: 830px;
+/* 푸터3 */
+.footer_con3_l{
+    max-width: 850px;
     width: 100%;
 }
 
+.footer_con3_l address{
+	font-weight: bold;
+	margin:10px 0;
+}
+
+.footer_con3_l small,.footer_con3_l > P{
+	font-size:14px;
+	color:#6A6A6A;
+}
+
+.footer_con3_l > P{
+	margin:15px 0; 
+}
+
 .footer_con3_r{
+	max-width:350px;
+	width:100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between
 }
 
+.footer_con3_r > div{
+	width: 170px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_con3_r > div > select {   
+	width: 70%;
+	border: 1px solid #E8E8E8;
+	border-radius: 8px;
+	padding-left:5px;
+}
+.footer_con3_r > div > button{
+	border: 1px solid #E8E8E8;
+	background-color:#6A6A6A;
+	color:#FFF;
+	border-radius: 8px;
+}
+
 .footer_con3_r .mark{
 	width:100%;
-
+	margin: 12px 0;
+	margin-left: 140px;
 }
+
 .footer_con3_r .mark ul{
 	display: flex;	
 	flex-direction: row-reverse;

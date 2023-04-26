@@ -1,14 +1,43 @@
-
 $(document).ready(function(){
+
+
+
+    // var currentPosition = parseInt($(".quickmenu").css("top"));
+    // $(window).scroll(function() {
+    //   var position = $(window).scrollTop(); 
+    //   $(".quickmenu").stop().animate({"top":position+currentPosition+"px"},1000);
+    // });
+
+  //   $(window).scroll(function(){  //스크롤이 움직일때마다 이벤트 발생
+  //     var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환
+  //     $(".quickmenu").stop().animate({top:position+"px"}, 400); //해당 오브젝트 위치값 재설정
+  //  });
+
+   
+	// $(".quickmenu").on("click",function(){
+  //       var $quick = $(".quickmenu");
+  //       if($quick.hasClass("full")){
+  //           $quick.removeClass("full");
+  //           $(this).text("더보기");
+  //       }else{
+  //           $quick.addClass("full");
+  //           $(this).text("숨기기");
+  //           $quick.find("li:nth-child(6)").children("a").focus();
+  //       }
+  //   });
+
+
+
   //메뉴 슬라이드다운(전체)
-  $('nav::before').hide();
 
   $('nav > ul > li').mouseenter(function(){
-  $('.sub_nav, nav::before').show();
+  $('.sub_nav').show();
+  $('nav').addClass("active");
   });
   
   $('nav > ul > li').mouseleave(function(){
-  $('.sub_nav, nav::before').hide();
+  $('.sub_nav').hide();
+  $('nav').removeClass("active");
     });
 
 

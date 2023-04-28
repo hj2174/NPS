@@ -53,3 +53,6 @@ a{
 button{    
     cursor: pointer;
 }
+
+/* 폰트 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);

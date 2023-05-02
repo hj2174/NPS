@@ -244,7 +244,7 @@ section h2{
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1220px;
-	width:100%;
+	width:calc(100% - 20px);
 	margin: 0 auto;
 	padding:50px 0;
 }
@@ -491,51 +491,123 @@ section h2{
 	border-radius: 30px;
 	background-color: #FFF;
 	cursor: pointer;
+	width:30px;
+	height:30px;
 }
 
-.sns_tab_menu ul li p{
-	color:#FFF;
-}
-
-.sns_tab_menu ul li.on{
-	padding-right:8px;
-}
-
-.sns_tab_menu ul li.on img {
-	filter: invert(100%) brightness(100%);
-}
-
-
-/* sns 배경 리스트 */
-.sns_tab_menu ul li.on.on_air{
-	background-color: #409adb;
-}
-.sns_tab_menu ul li.on.blog{
-	background-color: #10ac33;
-}
-.sns_tab_menu ul li.on.youtube{
-	background-color: #e35757;
-}
-.sns_tab_menu ul li.on.instargram{
-	background:linear-gradient(to right, #fed446, #fa984b , #fe535c, #ea4cc5, #ab5cf0);
-}
-
-.sns_tab_menu ul li p{
-	display: none;
-}
-
-.sns_tab_menu ul li.on p{
-	display: block;
-	
+.sns_tab_menu ul li::before{	
+	content: "";
+	background-size:  100%;
+	width: 30px;
+	height: 28px;
 }
 
 .on{
 	display: block;
 }
 
+.sns_tab_menu ul li p{
+	color:#FFF;
+	display: none;
+}
+.sns_tab_menu ul li.on{
+	padding:2px 8px;
+	width:100%;
+	height:30px;
+}
+
+.sns_tab_menu ul li.on p{
+	display: block;
+}
+
+
+/* sns 배경 리스트
+.sns_tab_menu ul li.on,
+.sns_tab_con div.on{
+	background-repeat: no-repeat;
+	background-position:10px;
+	background-size: 25px 25px;
+}
+ */
+/* on_air */
+.sns_tab_menu ul li.on_air::before{
+	background-image:url(../img/i_sns_onair.svg);
+}
+
+.sns_tab_menu ul li.on.on_air::before{
+	background-image: url(../img/sns_logo_onair.svg);
+}
+
+.sns_tab_menu ul li.on.on_air,
+.sns_tab_con > div.on_air{
+	background-color: #409adb;
+}
+
+/* blog */
+.sns_tab_menu ul li.blog::before{
+	background-image:url(../img/i_sns_blog.svg);
+}
+
+.sns_tab_menu ul li.on.blog,
+.sns_tab_con > div.blog{
+	background-color: #10ac33;
+}
+
+.sns_tab_menu ul li.on.blog::before{
+	background-image: url(../img/sns_logo_blog.svg);
+}
+
+/* youtube */
+.sns_tab_menu ul li.youtube::before{
+	background-image: url(../img/i_sns_yt.svg);
+}
+
+.sns_tab_menu ul li.on.youtube,
+.sns_tab_con > div.youtube{
+	background-color: #e35757;
+}
+
+.sns_tab_menu ul li.on.youtube::before{
+	background-image: url(../img/sns_logo_yt.svg);
+}
+
+/* instargram */
+.sns_tab_menu ul li.instargram::before{
+	background-image: url(../img/i_sns_inst.svg);
+}
+
+
+.sns_tab_menu ul li.on.instargram::before{
+	background-image:url(../img/sns_logo_inst.svg);
+}
+
+.sns_tab_menu ul li.on.instargram,
+.sns_tab_con > div.instargram{
+	background:linear-gradient(to right, #fed446, #fa984b , #fe535c, #ea4cc5, #ab5cf0);
+}
+
+.sns_tab_con > div{
+	display: flex;
+	align-items: center
+}
+
+.sns_tab_con h5{
+	font-size: 20px;
+	color:#FFF;
+}
+.sns_tab_con p{
+	color:#FFF;
+	margin:20px 0;
+}
+
+.sns_tab_con img{
+	width:150px;
+	height: 150px;
+	margin:0 20px;
+}
+
 /* sns 배너 컨텐츠 */
 .sns_tab_con{
-	display: flex;
 	width:530px;
 	height: 190px;	
     overflow: hidden;
@@ -548,8 +620,7 @@ section h2{
 }
 
 .sns_tab_con img{
-	width:100%;
-	height: 100%;
+
 }
 
 /* section2 */
@@ -887,7 +958,16 @@ footer{
 	}
 }
 
+@media (max-width: 1245px) {
+	.quickmenu {
+	  display: none;
+	}
+}
+
 @media (max-width: 1080px){
+	.section_inner{
+		width:100%;
+	}
 	.header_top h1 {
     margin: 0 auto;
 	}
@@ -929,13 +1009,10 @@ footer{
 		margin:0 auto;
 	}
 	.popup_zone img{
-		width:100%;
-	}
-	.sns_tab_con img,.sns_tab_con, .sns_tab_con > div{
 	
 	}
-	.sns_tab_con{
+	
+	.sns_tab_con,.sns_tab_con > div{
 		width: 100%;
-	
 	}
 }

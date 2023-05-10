@@ -1,15 +1,61 @@
 $(document).ready(function(){
 
-  //메뉴 슬라이드다운(전체)
-  $('nav > ul > li').mouseenter(function(){
-  $('.sub_nav').show();
-  $('nav').addClass("active");
+  //pc 메뉴 슬라이드다운(전체)
+  $('.pc_menu > ul > li').mouseenter(function(){
+  $('.pc_menu .sub_nav').show();
+  $('.pc_menu').addClass("active");
   });
   
-  $('nav > ul > li').mouseleave(function(){
-  $('.sub_nav').hide();
-  $('nav').removeClass("active");
+  $('.pc_menu > ul > li').mouseleave(function(){
+  $('.pc_menu .sub_nav').hide();
+  $('.pc_menu').removeClass("active");
     });
+
+  //모바일 메뉴
+  $(".mo_menu_btn").click(function(){
+    $('.mobile_menu_inner').addClass("active")
+  });
+
+  
+
+
+
+
+  // $(".mobile-nav .gnav-dep3").parent().addClass("is-sub");
+  // $("#gnav-m .btn-all-menu").remove();
+
+  // var $headerNav = $(".mobile-nav");
+  // var $btn = $(".btn-mobile-menu");
+
+  // $btn.click(function(){
+  //     if(!$(this).hasClass("active")){
+  //         gnavOpen();                
+  //     }else{
+  //         gnavClose();                
+  //     }            
+  // });
+
+  // function gnavOpen(){
+  //     $headerNav.addClass("active");
+  //     $btn.addClass("active");
+  //     $("html").css("overflow", "hidden");
+  // }
+  // function gnavClose(){
+  //     $headerNav.removeClass("active");
+  //     $btn.removeClass("active");
+  //     $("html").css("overflow", "auto");
+  // }
+
+  // $(".mobile-nav .gnav-dep1 > li > a").click(function(e){
+  //     e.preventDefault();
+  //     $(this).parent().toggleClass("active");
+  // });
+  // $(".mobile-nav .gnav-dep2 > li.is-sub > a").click(function(e){
+  //     e.preventDefault();
+  //     $(this).parent().toggleClass("active");
+  // });
+
+
 
 
   // 메인 배너 슬라이드 
@@ -17,6 +63,7 @@ $(document).ready(function(){
     spaceBetween: 30,    // 슬라이드 사이 여백
     slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
     centeredSlides: true,    //센터모드
+    //autoHeight : true,
     autoplay: {     //자동슬라이드 (false-비활성화)
       delay: 3000, // 시간 설정
       disableOnInteraction: false, // false-스와이프 후 자동 재생

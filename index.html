@@ -41,6 +41,7 @@
 		<header>
 			<div class="header_top"> 
 				<h1><img src="./img/nps_logo.png" alt="국민연금공단로고"></h1>
+				<h2 class="mo_menu_btn"></h2>
 				
 				<!-- 검색 -->
 				<fieldset>
@@ -64,8 +65,9 @@
 					</ul>
 				</div>
 			</div>
-		
-			<nav>
+			
+			<!-- pc 메뉴 -->
+			<nav class="pc_menu">
 				<ul>
 					<li>
 						<a href="#">정보공개</a>
@@ -192,6 +194,145 @@
 					</li>
 				</ul>
 			</nav>
+
+			<!-- 모바일 메뉴 -->
+			<div class="mobile_menu_inner">
+						
+				<!-- 검색 -->
+				<fieldset>
+					<input class="search" type="text">
+					<input class="search_btn" type="button">
+				</fieldset>
+				
+				<nav class="mo_menu">
+					<ul>
+						<li>
+							<a href="#">정보공개</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="">사전정보공표</a>
+								</li>
+								<li>
+									<a href="">정보목록</a>
+								</li>
+								<li>
+									<a href="">정보공개</a>
+								</li>
+								<li>
+									<a href="">공공데이터개발</a>
+								</li>
+								<li>
+									<a href="">자료실</a>
+								</li>
+								<li>
+									<a href="">사업실명제</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li>
+							<a href="#">전자민원</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="#">개인민원</a>
+								</li>
+								<li>
+									<a href="#">사업장민원</a>
+								</li>
+								<li>
+									<a href="#">국민연금EDI</a>
+								</li>
+								<li>
+									<a href="#">웹팩스 수진조회</a>
+								</li>
+								<li>
+									<a href="#">지사/직원찾기</a>
+								</li>
+								<li>
+									<a href="#">서식찾기</a>
+								</li>
+								<li>
+									<a href="#">인터넷찾납부</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li>
+							<a href="#">소통과 참여</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="">고객상담실</a>
+								</li>
+								<li>
+									<a href="">친절/불친절</a>
+								</li>
+								<li>
+									<a href="">국민제안</a>
+								</li>
+								<li>
+									<a href="">국민연금 토론방</a>
+								</li>
+								<li>
+									<a href="">신고센터</a>
+								</li>
+							</ul>
+						</li>
+	
+						
+						<li>
+							<a href="#">연금소식</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="">새소식</a>
+								</li>
+								<li>
+									<a href="">보도자료</a>
+								</li>
+								<li>
+									<a href="">채용안내</a>
+								</li>
+								<li>
+									<a href="">입찰정보</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li>
+							<a href="#">연금정보</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="">알기쉬운 국민연금</a>
+								</li>
+								<li>
+									<a href="">국민연금통계</a>
+								</li>
+								<li>
+									<a href="">세계의연금제도</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="#">공단소개</a>
+							<ul class="sub_nav">
+								<li>
+									<a href="">이사장</a>
+								</li>
+								<li>
+									<a href="">비전 및 전략</a>
+								</li>
+								<li>
+									<a href="">경영진</a>
+								</li>
+								<li>
+									<a href="">조직 및 인원</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
 		</header>
 
 		<!-- 메인 섹션1 -->
@@ -286,23 +427,24 @@
 						<h2>개인 서비스</h2>
 						<ul>
 							<li>
-								<a href="#">가입증명서 발급</a>
+								<a href="#">가입증명서
+								<br>발급</a>
 							</li>
 							<li>
-								<a href="#">가입내역 조회</a>
+								<a href="#">가입내역 <br>조회</a>
 							</li>
 							<li>
-								<a href="#">보험료 결정내역 조회</a>
+								<a href="#">보험료 <br>결정내역 조회</a>
 							</li>
 
 							<li>
 								<a href="#">연금산정용가입 내역확인서 발급</a>
 							</li>
 							<li>
-								<a href="#">연금 / 일시금 청구</a>
+								<a href="#">연금 / 일시금 <br>청구</a>
 							</li>
 							<li>
-								<a href="#">전화번호 / 이메일 변경</a>
+								<a href="#">전화번호 / <br>이메일 변경</a>
 							</li>
 						</ul>
 					</div>
@@ -319,22 +461,20 @@
 				<!-- 팝업존 -->
 				<div class="popup_zone">
 					<h2>팝업존</h2>
-					
-					<div class="swiper-container">
-						
-						<div class="popupzone-slider-nav">
-							<div class="slider-page">
-								<span class="swiper-current"></span> / 
-								<span class="swiper-total"></span>
-							</div>
-							
-							<div class="slider-controller">
-								<a href="#" class="btn-prev" tabindex="0" role="button" aria-label="Previous slide">이전 배너</a>
-								<a href="#" class="btn-stop">팝업존 자동슬라이드 멈춤</a>
-								<a href="#" class="btn-next" tabindex="0" role="button" aria-label="Next slide">다음 배너</a>
-							</div>
+					<div class="popupzone-slider-nav">
+						<div class="slider-page">
+							<span class="swiper-current"></span> / 
+							<span class="swiper-total"></span>
 						</div>
+						
+						<div class="slider-controller">
+							<a href="#" class="btn-prev" tabindex="0" role="button" aria-label="Previous slide">이전 배너</a>
+							<a href="#" class="btn-stop">팝업존 자동슬라이드 멈춤</a>
+							<a href="#" class="btn-next" tabindex="0" role="button" aria-label="Next slide">다음 배너</a>
+						</div>
+					</div>
 
+					<div class="swiper-container">
 						<ul class="swiper-wrapper">
 							<li class="swiper-slide">
 								<a href="">
@@ -517,11 +657,14 @@
 						<h4>국민연금 고객센터</h4>
 						<img class="arrow" src="./img/i_call_arrow.svg" alt="">
 						<p>
-							국번없이 
+							국번없이
 							<span>1</span>
 							<span>3</span>
-							<span>55</span>
-							(유료) 해외 +82-63-713-6900 평일 09:00 ~ 18:00</p>
+							<span>55</span> (유료)
+							<span>해외 +82-63-713-6900 </span>
+							<span>평일 09:00 ~ 18:00</span>
+						
+						</p>
 					</div>
 
 					<div class="footer_con1_r">

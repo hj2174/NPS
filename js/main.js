@@ -1,59 +1,58 @@
 $(document).ready(function(){
 
   //pc 메뉴 슬라이드다운(전체)
-  $('.pc_menu > ul > li').mouseenter(function(){
-  $('.pc_menu .sub_nav').show();
-  $('.pc_menu').addClass("active");
+  $('.pc_nav > ul > li').mouseenter(function(){
+  $('.pc_nav .sub_nav').show();
+  $('.pc_nav').addClass("active");
   });
   
-  $('.pc_menu > ul > li').mouseleave(function(){
-  $('.pc_menu .sub_nav').hide();
-  $('.pc_menu').removeClass("active");
+  $('.pc_nav > ul > li').mouseleave(function(){
+  $('.pc_nav .sub_nav').hide();
+  $('.pc_nav').removeClass("active");
     });
 
+
   //모바일 메뉴
-  $(".mo_menu_btn").click(function(){
-    $('.mobile_menu_inner').addClass("active")
+  var $mobile_nav = $(".mobile_nav_inner");
+  var $btn = $(".mobile_nav_btn");
+
+  $btn.click(function(){
+      if(!$(this).hasClass("active")){
+        monavOpen();                
+      }else{
+        monavClose();                
+      }            
   });
 
-  
+  function monavOpen(){
+      $mobile_nav.addClass("active");
+      $btn.addClass("active");
+  }
+
+  function monavClose(){
+      $mobile_nav.removeClass("active");
+      $btn.removeClass("active");
+  }
 
 
+		
+	
 
+		$(".mobile_nav li a").click(function(e){  //a=카테고리 제목
+				if($(this).next(".sub_nav").css("display") == "none"){  
 
-  // $(".mobile-nav .gnav-dep3").parent().addClass("is-sub");
-  // $("#gnav-m .btn-all-menu").remove();
+					$(".mobile_nav .sub_nav").slideUp(300); //나머지 서브메뉴
+					$(this).next(".sub_nav").slideDown(300); //클릭한 카테고리의 서브메뉴
+          $(this).addClass("active");
+				}else{ 
 
-  // var $headerNav = $(".mobile-nav");
-  // var $btn = $(".btn-mobile-menu");
+					$(this).next(".sub_nav").slideUp(300); 
+          $(this).removeClass("active");
+				}
+		});
 
-  // $btn.click(function(){
-  //     if(!$(this).hasClass("active")){
-  //         gnavOpen();                
-  //     }else{
-  //         gnavClose();                
-  //     }            
-  // });
+		
 
-  // function gnavOpen(){
-  //     $headerNav.addClass("active");
-  //     $btn.addClass("active");
-  //     $("html").css("overflow", "hidden");
-  // }
-  // function gnavClose(){
-  //     $headerNav.removeClass("active");
-  //     $btn.removeClass("active");
-  //     $("html").css("overflow", "auto");
-  // }
-
-  // $(".mobile-nav .gnav-dep1 > li > a").click(function(e){
-  //     e.preventDefault();
-  //     $(this).parent().toggleClass("active");
-  // });
-  // $(".mobile-nav .gnav-dep2 > li.is-sub > a").click(function(e){
-  //     e.preventDefault();
-  //     $(this).parent().toggleClass("active");
-  // });
 
 
 
@@ -144,8 +143,6 @@ $(document).ready(function(){
   top_btn.addEventListener('click', () => {
     header_top.scrollIntoView({ behavior: 'smooth' , block: 'nearest' })
   });
-
-
 
 
 	

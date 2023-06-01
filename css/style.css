@@ -157,6 +157,7 @@ html,body{
 	font-weight: 100;
 	color:#6A6A6A;
 	line-height: 12px;
+	cursor: pointer;
 	border: 1px solid #E8E8E8;
 }
 
@@ -170,7 +171,7 @@ html,body{
 
 
 /* pc 네비 */
-.pc_menu{
+.pc_nav{
 	border-top:1px solid #E8E8E8;
 	border-bottom:1px solid #E8E8E8;
 	position: relative;
@@ -200,7 +201,6 @@ html,body{
 
 .pc_nav > ul > li{
 	width: calc(100% / 6);
-	height:60px;
 }
 
 .pc_nav > ul > li > a{
@@ -979,26 +979,30 @@ footer{
 	color:#13A538;
 }
 
-.footer_con1_l .arrow,.footer_con1_r .arrow{
+.footer_inner .arrow{
 	background-color: #fff;
 }
 
-.footer_con1_r img,.footer_con1_mo img{
+.footer_con1_r img{
 	background-color:#425ABE;
 }
 
-.footer_con1 .footer_con1_mo{
+.footer_con1_r > div{   
+	width: calc(100% / 3);
+}
+
+.footer_con1_r .footer_con1_mo{
 	display: none;
 }
 
-.footer_con1_mo img{
-	width:20px;
-	height: 20px;
-	padding:5px;
+
+.footer_con1_r div{
+	display: flex;
+	align-items: center;
+	justify-content: space-around
 }
 
-.footer_con1_r > h4,
-.footer_con1_mo > h4{
+.footer_con1_r div h4{
 	color:#425ABE;
 }
 
@@ -1234,20 +1238,17 @@ footer{
 		justify-content: center;
 		margin-left:0;
 	}
-	.footer_con1_r .arrow{
+	.footer_con1_pc .arrow{
 		display: none;
 	}
 	footer,
-	.footer_con1_l .arrow, 
-	.footer_con1_r .arrow{
+	.footer_con1 .arrow{
 		background-color: #F5F5F5;
 	}
 	.footer_con1 .footer_con1_mo{
-		margin: 0 30px;
 		display: flex;
-		align-items: center;
 	}
-
+	
 	.pc_nav,.sub_nav{
 		display: none;
 	}
@@ -1342,7 +1343,12 @@ footer{
 			font-size:15px;
 		}
 
-
+		.footer_con1_l p{
+			padding:10px 0;
+		}
+		.footer_con1_r{
+			flex-direction: column;
+		}
 	}
 
 

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
   //pc 메뉴 슬라이드다운(전체)
   $('.pc_nav > ul > li').mouseenter(function(){
@@ -34,25 +34,17 @@ $(document).ready(function(){
       $btn.removeClass("active");
   }
 
+  $(".mobile_nav li a").click(function(e){  //a=카테고리 제목
+      if($(this).next(".sub_nav").css("display") == "none"){  
 
-		
-	
-
-		$(".mobile_nav li a").click(function(e){  //a=카테고리 제목
-				if($(this).next(".sub_nav").css("display") == "none"){  
-
-					$(".mobile_nav .sub_nav").slideUp(300); //나머지 서브메뉴
-					$(this).next(".sub_nav").slideDown(300); //클릭한 카테고리의 서브메뉴
-          $(this).addClass("active");
-				}else{ 
-
-					$(this).next(".sub_nav").slideUp(300); 
-          $(this).removeClass("active");
-				}
-		});
-
-		
-
+        $(".mobile_nav .sub_nav").slideUp(300); //나머지 서브메뉴
+        $(this).next(".sub_nav").slideDown(300); //클릭한 카테고리의 서브메뉴
+        $(this).addClass("active");
+      }else{ 
+        $(this).next(".sub_nav").slideUp(300); 
+        $(this).removeClass("active");
+      }
+  });
 
 
 
